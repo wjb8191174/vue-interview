@@ -5,8 +5,9 @@
 ```html
 <div v-for="child in children" v-for="isFile">{{ child.file }}</div>
 ```
-打印render函数
+
 ```javascript
+//打印render函数
 // 先执行v-for循环,再执行v-if
 ƒ anonymous(
 ) {
@@ -14,18 +15,27 @@ with(this){return _c('div',{attrs:{"id":"app"}},_l((children),function(child){re
 }
 ```
 
-
 - 不同级情况下
 ```html
 <template v-if="isFile">
     <div v-for="child in children">{{ child.file }}</div>
 </template>
 ```
-打印render函数
+
 ```javascript
+// 打印render函数
 // 先执行v-if,再执行v-for循环
 ƒ anonymous(
 ) {
 with(this){return _c('div',{attrs:{"id":"app"}},[(isFile)?_l((children),function(child){return _c('div',[_v(_s(child.file))])}):_e()],2)}
 }
+```
+
+```mermaid
+graph LR
+A[方形] -->B(圆角)
+    B --> C{条件a}
+    C -->|a=1| D[结果1]
+    C -->|a=2| E[结果2]
+    F[横向流程图]
 ```
