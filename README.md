@@ -7,12 +7,13 @@
 ```
 打印render函数
 ```javascript
+// 先执行v-for循环,再执行v-if
 ƒ anonymous(
 ) {
 with(this){return _c('div',{attrs:{"id":"app"}},_l((children),function(child){return (isFile)?_c('div',[_v(_s(child.file))]):_e()}),0)}
 }
 ```
-先执行v-for循环,再执行v-if
+
 
 - 不同级情况下
 ```html
@@ -22,9 +23,9 @@ with(this){return _c('div',{attrs:{"id":"app"}},_l((children),function(child){re
 ```
 打印render函数
 ```javascript
+// 先执行v-if,再执行v-for循环
 ƒ anonymous(
 ) {
 with(this){return _c('div',{attrs:{"id":"app"}},[(isFile)?_l((children),function(child){return _c('div',[_v(_s(child.file))])}):_e()],2)}
 }
 ```
-先执行v-if,再执行v-for循环
