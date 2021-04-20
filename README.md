@@ -1,6 +1,6 @@
 # vue-interview
 
-## v-if和v-for谁的优先级更高，应该如何使用避免性能问题
+## 1. v-if和v-for谁的优先级更高，应该如何使用避免性能问题
 
 源码中找答案compiler/codegen/index.js
 - 同级情况下
@@ -46,3 +46,4 @@ children: [
     {file: "bus", isShow: false}
 ]
 ```
+
